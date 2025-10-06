@@ -4,29 +4,55 @@
 */
 
 const tagliaCuci = function (strng1 = ' ', strng2 = ' '){
-  let strng3 = strng1.slice(0, 2) + strng2.slice(-3)
+  let strng3 = strng1.slice(0, 2).concat(strng2.slice(-3))
   if(strng1 === ' ' || strng2 === ' '){
     console.log("ERRORE! Manca una stringa.")
   } else { 
     console.log(strng3.toUpperCase())
   }
-
- 
 }
 
-tagliaCuci('madonnina', 'patong')
+tagliaCuci('madonnina', 'patty')
 
 /* ESERCIZIO 2 (for)
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
 */
 
+const random10 = function (){
+  elencoCasuale = []
+  for (let i = 0; i < 10; i++){
+    elencoCasuale.push(Math.ceil(Math.random()*100))
+  }
+  console.log("I tuoi numeri sono", elencoCasuale)
+  return elencoCasuale
+} 
+
+random10()
+
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
 
+const numeriPari = elencoCasuale.filter((numero, i) => {
+  if (numero%2 === 0) {
+      return elencoCasuale.splice(i, 0)
+    }
+  }
+)  
+
+console.log(numeriPari)
+
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
+
+let somma = 0
+const sommaliTutti = elencoCasuale.forEach((numero) => {
+  somma += numero
+  return somma
+})
+
+console.log(somma)
 
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
@@ -35,6 +61,8 @@ tagliaCuci('madonnina', 'patong')
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
+
+const sommaN = elencoCasuale.map()
 
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
