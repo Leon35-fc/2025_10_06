@@ -106,6 +106,14 @@ console.log(lunghezzaNome)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
 
+const arrayDispari = []
+
+for (let i = 1; i < 100; i += 2){
+  arrayDispari.push(i)
+}
+
+console.log(arrayDispari)
+
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
   {
