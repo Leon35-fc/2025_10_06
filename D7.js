@@ -62,12 +62,45 @@ console.log(somma)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
 
-const sommaN = elencoCasuale.map()
+let n = Math.ceil(Math.random()*10)
+console.log( "n vale :", n)
+
+const sommaciN = elencoCasuale.map((numero) => {
+ return numero + n}
+)
+ 
+console.log(sommaciN)
 
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
+
+const demonSlayerCharacters = [
+  "Tanjiro Kamado",
+  "Nezuko Kamado",
+  "Zenitsu Agatsuma",
+  "Inosuke Hashibira",
+  "Kanao Tsuyuri",
+  "Genya Shinazugawa",
+  "Giyu Tomioka",
+  "Shinobu Kocho",
+  "Kyojuro Rengoku",
+  "Tengen Uzui",
+  "Mitsuri Kanroji",
+  "Gyomei Himejima",
+  "Muichiro Tokito",
+  "Sanemi Shinazugawa",
+  "Obanai Iguro",
+  "Muzan Kibutsuji",
+];
+
+const lunghezzaNome = demonSlayerCharacters.map((comeSiChiama) => {
+  return comeSiChiama.length
+  }
+)
+
+console.log(lunghezzaNome)
 
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
